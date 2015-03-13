@@ -1,0 +1,159 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<script src="jquery-1.11.2.min.js"></script>
+<script src="jquery.chained.min.js"></script>
+</head>
+<body>
+<p>Ref : <a href="http://www.appelsiini.net/projects/chained">http://www.appelsiini.net/projects/chained</a></p>
+<h1>Simple usage</h1>
+<hr/>
+<select id="state" name="state">
+  <option value="">Pilih Negeri</option>
+  <option value="01">Johor</option>
+  <option value="02">Kedah</option>
+  <option value="03">Kelantan</option>
+  <option value="04">Melaka</option>
+  <option value="05">Negeri Sembilan</option>
+  <option value="06">Pahang</option>
+  <option value="07">Pulau Pinang</option>
+  <option value="08">Perak</option>
+  <option value="09">Perlis</option>
+  <option value="10">Selangor</option>
+  <option value="11">Terengganu</option>
+  <option value="12">Sabah</option>
+  <option value="13">Sarawak</option>
+  <option value="14">Wilayah Persekutuan Kuala Lumpur</option>
+  <option value="15">Wilayah Persekutuan Labuan</option>
+  <option value="16">Wilayah Persekutuan Putrajaya</option>
+</select>
+<select id="district" name="district">
+  <option value="">Pilih Daerah</option>
+  <option value="0101" class="01">BATU PAHAT</option>
+  <option value="0102" class="01">JOHOR BAHRU</option>
+  <option value="0103" class="01">KLUANG</option>
+  <option value="0201" class="02">KOTA SETAR</option>
+  <option value="0202" class="02">KUBANG PASU</option>
+  <option value="0203" class="02">PADANG TERAP</option>
+  <option value="0301" class="03">BACHOK</option>
+  <option value="0302" class="03">KOTA BHARU</option>
+  <option value="0303" class="03">MACHANG</option>
+</select>
+
+<script>
+$(function(){
+$("#district").chained("#state"); 
+});
+</script>
+<h1>multiple parents</h1>
+<hr/>
+<h2>Contoh Negeri/Daerah/Mukim</h2>
+<select id="negeri" name="negeri">
+  <option value="">Pilih Negeri</option>
+  <option value="01">Johor</option>
+  <option value="02">Kedah</option>
+  <option value="03">Kelantan</option>
+  <option value="04">Melaka</option>
+  <option value="05">Negeri Sembilan</option>
+  <option value="06">Pahang</option>
+  <option value="07">Pulau Pinang</option>
+  <option value="08">Perak</option>
+  <option value="09">Perlis</option>
+  <option value="10">Selangor</option>
+  <option value="11">Terengganu</option>
+  <option value="12">Sabah</option>
+  <option value="13">Sarawak</option>
+  <option value="14">Wilayah Persekutuan Kuala Lumpur</option>
+  <option value="15">Wilayah Persekutuan Labuan</option>
+  <option value="16">Wilayah Persekutuan Putrajaya</option>
+</select>
+<select id="daerah" name="daerah">
+  <option value="">Pilih Daerah</option>
+  <option value="0101" class="01">BATU PAHAT</option>
+  <option value="0102" class="01">JOHOR BAHRU</option>
+  <option value="0103" class="01">KLUANG</option>
+  <option value="0201" class="02">KOTA SETAR</option>
+  <option value="0202" class="02">KUBANG PASU</option>
+  <option value="0203" class="02">PADANG TERAP</option>
+  <option value="0301" class="03">BACHOK</option>
+  <option value="0302" class="03">KOTA BHARU</option>
+  <option value="0303" class="03">MACHANG</option>
+</select>
+<select id="mukim" name="mukim">
+  <option value="">Pilih Mukim</option>
+  <option value="010101" class="0101">MUKIM BAGAN</option>  
+  <option value="010102" class="0101">MUKIM CHAAH BAHRU</option>
+  
+  <option value="010201" class="0102">MUKIM JELUTONG</option>
+  <option value="010202" class="0102">MUKIM PLENTONG</option>
+  
+  <option value="010301" class="0103">MUKIM ULU BENUT</option>
+  <option value="010302" class="0103">MUKIM KAHANG</option>
+  
+  <option value="020101" class="0201">MUKIM ALOR MALAI</option>
+  <option value="020102" class="0201">MUKIM ANAK BUKIT</option>
+  <option value="020201" class="0202">MUKIM BINJAL</option>
+</select>
+<h2>Contoh Jenama Kenderaan/Model/Siri</h2>
+<select id="jenama" name="jenama">
+  <option value="">Pilih Jenama Kenderaan</option>
+  <option value="honda">Honda</option>
+  <option value="toyota">Toyota</option>
+</select>
+<select id="model" name="model">
+  <option value="">Pilih Model</option>
+  <option value="city" class="honda">All-New City</option>
+  <option value="civic" class="honda">Civic</option>
+  <option value="accord" class="honda">Accord</option>
+  
+  <option value="vios" class="toyota">Vios</option>
+  <option value="altis" class="toyota">Corolla Altis</option>
+  <option value="camry" class="toyota">Camry</option>
+</select>
+<select id="siri" name="siri">
+  <option value="">Pilih Siri</option>
+  
+  <option value="city-s1" class="city">Honda CITY 1.5L S</option>  
+  <option value="city-s2" class="city">Honda CITY 1.5L S+</option>
+    <option value="city-e" class="city">Honda CITY 1.5L E</option>
+        <option value="city-v" class="city">Honda CITY 1.5L V</option>
+  
+  <option value="civic-1" class="civic">Honda Civic 1.8 S</option>  
+  <option value="civic-2s" class="civic">Honda Civic 2.0 S</option>
+    <option value="civic-2n" class="civic">Honda Civic 2.0 Navi</option>
+  
+  
+    <option value="accord-1" class="accord">Honda Accord 2.0 VTi</option>  
+  <option value="accord-2" class="accord">Honda Accord 2.0 VTi-L</option>
+    <option value="accord-3" class="accord">Honda Accord 2.4 VTi-L</option>
+    
+    
+  <option value="vios-1" class="vios">1.5 TRD Sportivo (AT)</option>
+  <option value="vios-2" class="vios">1.5G (AT)</option>
+    <option value="vios-3" class="vios">1.5E (AT)</option>
+  
+  <option value="altis-1" class="altis">3ZR-FE 2.0V</option>
+  <option value="altis-2" class="altis">2ZR-FE 1.8G</option>
+    <option value="altis-3" class="altis">2ZR-FE 1.8E</option>
+  
+  <option value="camry-1" class="camry">2AR-FE 2.5V</option>
+  <option value="camry-2" class="camry">1AZ-FE 2.0G X</option>
+  <option value="camry-3" class="camry">1AZ-FE 2.0G</option>
+</select>
+
+<script>
+$(function(){
+
+/*Contoh Negeri/Daerah/Mukim*/
+$("#daerah").chained("#negeri"); 
+$("#mukim").chained("#daerah"); 
+
+/*Contoh Jenama/Model/Siri*/
+$("#model").chained("#jenama"); 
+$("#siri").chained("#model"); 
+});
+</script>
+</body>
+</html>
